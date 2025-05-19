@@ -10,7 +10,7 @@ from ..models.hf_model import HFModel
 from ..models.gguf_model import GGUFModel
 from ..models.exl2_model import EXL2Model, EXL2ModelAsync
 from ..models.vllm_model import VLLMModelBatch
-from ..models.llamacpp_server import LlamaCPPServerModel, LlamaCPPServerAsyncModel
+#from ..models.llamacpp_server import LlamaCPPServerModel, LlamaCPPServerAsyncModel
 from ..utils.chunking import chunk_text
 from ..utils import preprocessing
 from .playback import ModelOutput
