@@ -9,10 +9,8 @@ from .version.interface import (
 from .models.config import ModelConfig
 from .models.info import Backend, InterfaceVersion
 
-def Interface(config: ModelConfig) -> (
-        InterfaceHF | InterfaceEXL2 | InterfaceEXL2Async |
-        InterfaceVLLMBatch |):
 
+def Interface(config: ModelConfig) -> Union[InterfaceHF, InterfaceEXL2, InterfaceEXL2Async, InterfaceVLLMBatch]:
     if config.backend == Backend.HF:
         return InterfaceHF(config)
     elif config.backend == Backend.EXL2:
