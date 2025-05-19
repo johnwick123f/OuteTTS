@@ -12,15 +12,13 @@ from .info import GenerationType
 import logging
 from typing import Tuple
 
-try:
-    from vllm.engine.arg_utils import AsyncEngineArgs
-    from vllm.engine.async_llm_engine import AsyncLLMEngine
-    from vllm.sampling_params import SamplingParams
-    from vllm.utils import random_uuid
-    import vllm.model_executor.layers.utils
-    _VLLM_AVAILABLE = True
-except:
-    _VLLM_AVAILABLE = False
+
+from vllm.engine.arg_utils import AsyncEngineArgs
+from vllm.engine.async_llm_engine import AsyncLLMEngine
+from vllm.sampling_params import SamplingParams
+from vllm.utils import random_uuid
+import vllm.model_executor.layers.utils
+_VLLM_AVAILABLE = True
 
 def get_recent_tokens(prompt_tokens: torch.Tensor, 
                       output_tokens: torch.Tensor,
