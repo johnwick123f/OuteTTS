@@ -1,5 +1,6 @@
 from loguru import logger
 import os
+from typing import Union
 
 from .version.interface import (
     InterfaceHF, 
