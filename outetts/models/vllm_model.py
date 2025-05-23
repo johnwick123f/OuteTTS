@@ -120,7 +120,7 @@ class VLLMModelBatch:
             trust_remote_code=True, 
             tensor_parallel_size=additional_model_config.get("vllm_tensor_parallel_size", 1),
             max_model_len=8192, 
-            gpu_memory_utilization=additional_model_config.get("vllm_gpu_memory_utilization", 0.9),
+            gpu_memory_utilization=0.2,
             disable_log_stats=True,
             dtype='float16',
         )
